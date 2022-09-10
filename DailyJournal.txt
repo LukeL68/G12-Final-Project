@@ -1,0 +1,62 @@
+JOURNAL
+-------
+You can use this to make notes for yourself to help make a plan for where you are going to take your program the next day.
+
+FRIDAY / DEC 10 / 2021
+Created basic main menu
+Created sim window
+Created rocket image
+
+WEDNESDAY / JAN 5 / 2022
+PLAN: Today, I plan to add the image of the rocket to the main menu, and create the
+background graphics for the simulation window (ground, sky, rocket)
+RESULT: I was able to complete everything I planned to do. I also added red lines 
+every 100 pixels which allowed me to exactly set the size of the window to fit the
+canvas because they helped measure where the canvas began and ended.
+
+THURSDAY / JAN 6 / 2022
+PLAN: Today, I plan to write the code for the launch countdown (3s) and the code to allow the rocket to move across the screen. I expect that this will be a "rough draft" of the final code, which will be cleaner, more organised, and use more realistic/accurate physics.
+CHALLENGES: Trying to figure out how to update the simulation display, 
+              - should I redraw the entire canvas every frame? 
+              - is it possible to only update the image of the rocket?
+RESULT: I was able to complete everything I planned to do. The countdown works as intended, and the rocket is able to fly upwards and fall back down to the ground (velocity of 1 pixel every loop). I ended up updating the entire canvas every frame.
+TODO: I noticed that running the simulation multiple times with the same values result in different times elapsed when the rocket hits the ground, but this should not happen. It probably has something to do with the simulation speed, so I need to figure out how to keep it consistent. I tried adding a delay in the loop that updates the frames and the values, but this did not solve the problem.
+
+FRIDAY / JAN 7 / 2022
+Fri-debate
+
+MONDAY / JAN 17 / 2022
+PLAN: Try to implement rotating the rocket, and create necessary sprites at 10 degree intervals
+RESULT: I was able to make all the necessary rocket sprites, and I was able to make the rocket rotate clockwise and counter-clockwise. I made 72 images total, 36 images of the rocket with it's engine off, and 36 with the rockets' engine on. Each of the images is the rocket at a 10 degree interval of the full 360 degrees. The images were named "rocket" or "rocketfire" (depending on whether the rocket's engine was on), "-", "(a number between 0 and 35 that represent the 10 degree intervals counter-clockwise)", ".png". I was able to store both sets of 36 images in two arrays so that the images can be accessed mathematically (dividing the counter-clockwise degree angle by 10 and rounding it to the nearest integer results in a value equal to the index of the properly rotated image).
+
+TUESDAY / JAN 18 / 2022
+PLAN: Implement physics in the vertical direction
+RESULT: Need help.
+
+WEDNESDAY / JAN 19 / 2022
+PLAN: Implement physics.
+RESULT: Did some planning on paper but need help.
+
+THURSDAY / JAN 20 / 2022
+PLAN: Add a second class and plan out how physics will work.
+RESULT: Replaced parameters array with parameters class.
+
+FRIDAY / JAN 21 / 2022
+PLAN: Implement physics, but probably need help.
+RESULT: Got help which was very useful (thanks!) and I understand how the physics will work now.
+
+MONDAY / JAN 24 / 2022
+PLAN: Implement physics.
+RESULT: I was able to get physics to work in the vertical direction. I will need to figure out how to properly calculate and format the orientation to implement physics horizontally.
+
+TUESDAY / JAN 25 / 2022
+PLAN: Implement orientation and horizontal physics 
+RESULT: I was able to figure out how to format the angles and orientation of the rocket, which allowed it to travel horizontally. I had to add an additional variable to store a related acute angle that was calculated from the horizontal and vertical velocity of the rocket, and convert that related acute angle into a principle angle. I also noticed that the rocket would easily fly out of the frame of the simulation, so I added a scale slider so that the user could choose how many meters each pixel represents. I also reduced the maximum values of the seconds of fuel, engine thrust, and launch angle to limit the distance the rocket can travel.
+
+MONDAY / JAN 31 / 2022
+PLAN: Fix physics bugs and polish program
+RESULT: Was able to fix a bug where the rocket would not orient correctly when heading to the right. I also added a dialog to allow the user to retry the simulation or return to the menu after the simulation ends.
+
+TUESDAY / FEB 1 / 2022
+PLAN: Polish program and add more comments
+RESULT: Polished code and added more comments. The program is finished.
